@@ -39,7 +39,7 @@ version() {
 
   if [[ "$1" == "" ]]; then
     echo "Please specify a version."
-    echo "Example: install-oc-tools --version 4.4.6"
+    echo "Example: install-oc-tools --version 4.5.6"
     exit 1
   else
     VERSION=$(curl -s https://mirror.openshift.com/pub/openshift-v4/clients/ocp/$1/release.txt | grep 'Name:' | awk '{print $NF}')
@@ -219,20 +219,20 @@ If a previous version of the tools are installed it will make a backup of the fi
 Options:
   --latest:  Installs the latest specified version. If no version is specified then it
              downloads the latest stable version of the oc tools.
-    Example: install-oc-tools --latest 4.4
+    Example: install-oc-tools --latest 4.5.6
   --update:  Same as --latest
   --fast:    Installs the latest fast version. If no version is specified then it downloads
              the latest fast version.
-    Example: install-oc-tools --fast 4.4
+    Example: install-oc-tools --fast 4.5.6
   --stable:  Installs the latest stable version. If no version is specified then it
              downloads the latest stable version of the oc tools.
-    Example: install-oc-tools --stable 4.4
+    Example: install-oc-tools --stable 4.5.6
   --version: Installs the specific version.  If no version is specified then it
              downloads the latest stable version of the oc tools.
-    Example: install-oc-tools --version 4.4.6
+    Example: install-oc-tools --version 4.5.6
   --nightly: Installs the latest nightly version. If you do not specify a version it will grab
              the latest version.
-    Example: install-oc-tools --nightly 4.4
+    Example: install-oc-tools --nightly 4.5.6
              install-oc-tools --nightly
   --cleanup: This deleted all backed up version of oc, kubectl, and openshift-install
     Example: install-oc-tools --cleanup
